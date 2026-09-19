@@ -1,0 +1,28 @@
+[package]
+name = "s3sync"
+version = "0.1.0"
+edition = "2021"
+description = "rclone, scoped to S3-compatible backends — built on the object_store crate"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/s3sync"
+readme = "README.md"
+keywords = ["s3", "rclone", "sync", "object-storage", "minio"]
+categories = ["command-line-utilities", "filesystem"]
+
+[lib]
+name = "s3sync"
+path = "src/lib.rs"
+
+[[bin]]
+name = "s3sync"
+path = "src/main.rs"
+
+[dependencies]
+object_store = { version = "0.11", features = ["aws"] }
+tokio = { version = "1", features = ["full"] }
+futures = "0.3"
+clap = { version = "4", features = ["derive", "env"] }
+anyhow = "1"
+chrono = "0.4"
+md5 = "0.8"
