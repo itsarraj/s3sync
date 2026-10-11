@@ -9,6 +9,12 @@ crate — the same crate `mini-me`, `handshake-system`, `job-search-app`, and
 storage, so this is a natural fit for replacing a Go `rclone` binary in
 those apps' own deploy/backup scripts.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
